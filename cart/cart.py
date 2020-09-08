@@ -8,7 +8,7 @@ class Cart(object):
         # Initialize the cart
         self.session = request.session
         # request.session is the inbuilt method to get the current session
-        cart = self.session.get(session.CART_SESSION_ID)
+        cart = self.session.get(settings.CART_SESSION_ID)
         if not cart:
             # save an empty cart in the session in the dictionary(in JSON format)
             cart = self.session[settings.CART_SESSION_ID] = {}
