@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My shop{% endblock %}</title>
-    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="header">
-        <a href="/" class="logo">My Shop</a>
+        <a href="/" class="logo"  style="font-size: 30px;">My Shop</a>
     </div>
+    <br>
     <div id="subheader">
-        <div class="cart">
+        <div class="cart" style="font-size: 20px;">
             {% with total_items=cart|length %}
                 {% if cart|length > 0 %}
                     Your Cart:
