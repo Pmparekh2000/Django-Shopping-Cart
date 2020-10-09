@@ -5,7 +5,14 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Thank you</h1>
-    <p>Your order has been successfully completed. Your order number is</p>
-    <strong>{{ order.id }}</strong>
+    <div class="d-flex justify-content-center">
+        <div>
+            <h1>Thank you</h1>
+            <p>Your order has been successfully completed. Your order number is <strong>{{ order.id }}</strong></p>
+            <div>
+                <a href="{% url 'shop:product_list' %}" class="button light" style="font-size:20px">Continue shopping</a>
+            </div>
+        </div>
+    </div>
+    
 {% endblock %}
